@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mochawesome Report Card</title>
+    
+    <link rel="stylesheet" href="css/mochawesome.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="report-info-cnt">
+          <h1 class="report-title">recordAndroid</h1>
+          <h3 class="report-date">Thursday, August 17 2017, 02:24pm</h3>
+        </div>
+        <div class="nav-right">
+          <div class="quick-summary-cnt">
+              <ul class="list-unstyled quick-summary">
+                <li class="qs-item summary-duration" title="Duration">53.736<span>S</span></li>
+                <li class="qs-item summary-suites" title="Suites">1</li>
+                <li class="qs-item summary-tests" title="Tests">11</li>
+                <li class="qs-item summary-passes" title="Passed" data-filter="passed">11</li>
+                <li class="qs-item summary-failures" title="Failed" data-filter="failed">0</li>
+                <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
+              </ul>          </div>
+          <button class="nav-menu-btn open-menu" title="Menu"><i class="icon-menu"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report Summary -->
+    <div class="summary">
+      <div class="container">
+          <div class="row">
+            <div class="summary-col summary-duration">
+              <h1 class="summary-count">53.736<span>S</span></h1>
+              <h4 class="summary-label">S</h4>
+            </div>
+            <div class="summary-col summary-suites" title="Suites">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Suite</h4>
+            </div>
+            <div class="summary-col summary-tests" title="Tests">
+              <h1 class="summary-count">11</h1>
+              <h4 class="summary-label">Tests</h4>
+            </div>
+            <div class="summary-col summary-passes" data-filter="passed" title="Passed">
+              <h1 class="summary-count">11</h1>
+              <h4 class="summary-label">Passed</h4>
+            </div>
+            <div class="summary-col summary-failures" data-filter="failed" title="Failed">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Failed</h4>
+            </div>
+            <div class="summary-col summary-pending" data-filter="pending" title="Pending">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Pending</h4>
+            </div>
+          </div>      </div>
+    </div>
+    <div class="statusbar">
+      <div class="container">
+          <div class="row">
+            <div class="status-item status-item-pending-pct">0% Pending</div>
+            <div class="status-item status-item-passing-pct success">100% Passing</div>
+          </div>      </div>
+    </div>
+
+    <!-- Suites -->
+    <div class="details container">
+            <section class="suite-wrap">
+          <div id="5dc025e6-7f00-4e84-8779-d1aafa49b36f" class="suite has-tests has-passed">
+            <h3 class="suite-title">4.2.0/login.spec : emulator-5554</h3>
+            <h5 class="suite-filename">/4.2.0/login.spec.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="5dc025e6-7f00-4e84-8779-d1aafa49b36f" class="suite-chart" width="50" height="50" data-total-passes="11" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">14.458 s</li>
+                <li class="suite-summary-item tests">11</li>
+                <li class="suite-summary-item passed">11</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#5dc025e6-7f00-4e84-8779-d1aafa49b36f-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="5dc025e6-7f00-4e84-8779-d1aafa49b36f-test-list" class="list-group test-list collapse in">
+                    <div id="e0140550-e43c-4207-b704-e8da7fae1a72" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              tap: 请输入手机号 ( //*[@text=&quot;请输入手机号&quot;] )
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#e0140550-e43c-4207-b704-e8da7fae1a72 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">134 ms</span>
+              <a href="screenshots/d5b0e56151a8ac8f18a647f180fa1e9e.png" target="_blank" title="tap: 请输入手机号 ( //*[@text=&quot;请输入手机号&quot;] )" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.wait(<span class="hljs-string">'//*[@text="请输入手机号"]'</span>, <span class="hljs-number">30000</span>).sendElementActions(<span class="hljs-string">'tap'</span>);</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="ca18fdec-747c-4e67-b6dd-9a59bdf399b6" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              sendKeys: 13123456789{ESCAPE}
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#ca18fdec-747c-4e67-b6dd-9a59bdf399b6 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">114 ms</span>
+              <a href="screenshots/e578cacc09f34f768cd1062510e73b1a.png" target="_blank" title="sendKeys: 13123456789{ESCAPE}" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.sendKeys(_(<span class="hljs-string">`13123456789{ESCAPE}`</span>));</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="2ba999ad-6148-4cfe-933b-14ca1f4ef76c" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              tap: 下一步 ( //*[@text=&quot;下一步&quot;] )
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#2ba999ad-6148-4cfe-933b-14ca1f4ef76c > .test-code.collapse">Code</button>
+              <span class="test-duration fast">63 ms</span>
+              <a href="screenshots/e99bcadd5dd3f3ac710087ecbb3cbc8e.png" target="_blank" title="tap: 下一步 ( //*[@text=&quot;下一步&quot;] )" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.wait(<span class="hljs-string">'//*[@text="下一步"]'</span>, <span class="hljs-number">30000</span>).sendElementActions(<span class="hljs-string">'tap'</span>);</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="25a581b6-0657-427b-a99f-1b44f75430ac" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              tap: 请输入6位验证码 ( //*[@text=&quot;请输入6位验证码&quot;] )
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#25a581b6-0657-427b-a99f-1b44f75430ac > .test-code.collapse">Code</button>
+              <span class="test-duration slow">10.612 s</span>
+              <a href="screenshots/ca29f30a02eed9b718a84ad3d903cf10.png" target="_blank" title="tap: 请输入6位验证码 ( //*[@text=&quot;请输入6位验证码&quot;] )" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.wait(<span class="hljs-string">'//*[@text="请输入6位验证码"]'</span>, <span class="hljs-number">30000</span>).sendElementActions(<span class="hljs-string">'tap'</span>);</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="ba5d0536-66b7-4730-a6b0-22992dea7f58" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              sendKeys: 123456{ESCAPE}
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#ba5d0536-66b7-4730-a6b0-22992dea7f58 > .test-code.collapse">Code</button>
+              <span class="test-duration medium">612 ms</span>
+              <a href="screenshots/4c191bfd041691371f0b770b83bb765d.png" target="_blank" title="sendKeys: 123456{ESCAPE}" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.sendKeys(_(<span class="hljs-string">`123456{ESCAPE}`</span>));</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="b460d33e-a92c-4b91-aedd-c9c67e3007f3" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              tap: 登录 ( //*[@text=&quot;登录&quot;] )
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#b460d33e-a92c-4b91-aedd-c9c67e3007f3 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">38 ms</span>
+              <a href="screenshots/8e59078ff5cb816cf1414714e58a418a.png" target="_blank" title="tap: 登录 ( //*[@text=&quot;登录&quot;] )" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.wait(<span class="hljs-string">'//*[@text="登录"]'</span>, <span class="hljs-number">30000</span>).sendElementActions(<span class="hljs-string">'tap'</span>);</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="b11a51cc-f5d9-4525-af5c-339ab6bd6c5f" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              expect: text, //*[@text=&quot;逐鹿甄选&quot;], equal, 逐鹿甄选
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#b11a51cc-f5d9-4525-af5c-339ab6bd6c5f > .test-code.collapse">Code</button>
+              <span class="test-duration slow">1.511 s</span>
+              <a href="screenshots/4b3f95b07403b51e5c42325c7ee7c69d.png" target="_blank" title="expect: text, //*[@text=&quot;逐鹿甄选&quot;], equal, 逐鹿甄选" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.sleep(<span class="hljs-number">300</span>).wait(<span class="hljs-string">'//*[@text="逐鹿甄选"]'</span>, <span class="hljs-number">30000</span>)<br>               .text()<br>               .should.not.be.a(<span class="hljs-string">'error'</span>)<br>               .should.equal(_(<span class="hljs-string">`逐鹿甄选`</span>));</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="0d83d80d-b279-4f97-a3a7-3059270895d8" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              expect: text, //*[@text=&quot;我的订阅&quot;], equal, 我的订阅
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#0d83d80d-b279-4f97-a3a7-3059270895d8 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">351 ms</span>
+              <a href="screenshots/4a6fb1e58a52af3a858f429b35ff6137.png" target="_blank" title="expect: text, //*[@text=&quot;我的订阅&quot;], equal, 我的订阅" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.sleep(<span class="hljs-number">300</span>).wait(<span class="hljs-string">'//*[@text="我的订阅"]'</span>, <span class="hljs-number">30000</span>)<br>               .text()<br>               .should.not.be.a(<span class="hljs-string">'error'</span>)<br>               .should.equal(_(<span class="hljs-string">`我的订阅`</span>));</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="b2aadd0c-d1d4-4737-bb84-1fa31ccdc864" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              expect: text, //*[@text=&quot;搜索业内最全项目数据库&quot;], equal, 搜索业内最全项目数据库
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#b2aadd0c-d1d4-4737-bb84-1fa31ccdc864 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">336 ms</span>
+              <a href="screenshots/0be861abaa8cf47f1afe4db264958e6f.png" target="_blank" title="expect: text, //*[@text=&quot;搜索业内最全项目数据库&quot;], equal, 搜索业内最全项目数据库" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.sleep(<span class="hljs-number">300</span>).wait(<span class="hljs-string">'//*[@text="搜索业内最全项目数据库"]'</span>, <span class="hljs-number">30000</span>)<br>               .text()<br>               .should.not.be.a(<span class="hljs-string">'error'</span>)<br>               .should.equal(_(<span class="hljs-string">`搜索业内最全项目数据库`</span>));</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="7f33b369-ef49-4c84-9c1f-0ffa9a44e3d6" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              expect: text, //*[@text=&quot;项目&quot;], equal, 项目
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#7f33b369-ef49-4c84-9c1f-0ffa9a44e3d6 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">345 ms</span>
+              <a href="screenshots/2ab27544dd3166f6aea7adc1a099d854.png" target="_blank" title="expect: text, //*[@text=&quot;项目&quot;], equal, 项目" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.sleep(<span class="hljs-number">300</span>).wait(<span class="hljs-string">'//*[@text="项目"]'</span>, <span class="hljs-number">30000</span>)<br>               .text()<br>               .should.not.be.a(<span class="hljs-string">'error'</span>)<br>               .should.equal(_(<span class="hljs-string">`项目`</span>));</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="ee4ddf5d-03c7-403b-baa3-abe7a5468d8e" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              expect: text, //*[@text=&quot;精选机构&quot;], equal, 精选机构
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#ee4ddf5d-03c7-403b-baa3-abe7a5468d8e > .test-code.collapse">Code</button>
+              <span class="test-duration fast">342 ms</span>
+              <a href="screenshots/3a1709a32533e1034b7e40ddb54ee306.png" target="_blank" title="expect: text, //*[@text=&quot;精选机构&quot;], equal, 精选机构" data-lightbox="4.2.0/login.spec : emulator-5554" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{<br>        <span class="hljs-keyword">await</span> driver.sleep(<span class="hljs-number">300</span>).wait(<span class="hljs-string">'//*[@text="精选机构"]'</span>, <span class="hljs-number">30000</span>)<br>               .text()<br>               .should.not.be.a(<span class="hljs-string">'error'</span>)<br>               .should.equal(_(<span class="hljs-string">`精选机构`</span>));</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>Report generated by <a href="http://adamgruber.github.io/mochawesome/" target="_blank">mochawesome</a>.<br>Designed and built by <a href="https://github.com/adamgruber" target="_blank">adamgruber</a>. &copy;2017.</p>
+      </div>
+    </footer>
+
+    <!-- Nav Menu -->
+    <div class="nav-menu-wrap">
+      <div class="menu-overlay close-menu"></div>
+      <nav class="menu">
+        <button class="nav-menu-btn close-menu"><i class="icon-failed"></i></button>
+        <ul class="list-unstyled main-menu">
+                <li class="nav-menu-item">
+                <a href="#5dc025e6-7f00-4e84-8779-d1aafa49b36f" class="nav-menu-item-link has-passes">4.2.0/login.spec : emulator-5554</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Hosts -->
+    <div class="hosts-wrap">
+      <div class="hosts-overlay close-hosts"></div>
+      <div class=""></div>
+      <textarea></textarea>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vendor.js"></script>
+    <script src="js/mochawesome.js"></script>
+  </body>
+</html>

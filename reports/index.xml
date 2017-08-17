@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="4_2_0/login_spec.emulator-5554" timestamp="2017-08-17T06:24:34" tests="1">
+    <testcase name="UIRecorder tests" time="14.458">
+    </testcase>
+  </testsuite>
+</testsuites>
