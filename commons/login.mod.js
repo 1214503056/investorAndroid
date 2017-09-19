@@ -1,14 +1,18 @@
-var fs = require('fs');
-var path = require('path');
-var cp = require('child_process');
-var chai = require("chai");
-var should = chai.should();
-var JWebDriver = require('jwebdriver');
+const fs = require('fs');
+const path = require('path');
+const cp = require('child_process');
+const chai = require("chai");
+const should = chai.should();
+const JWebDriver = require('jwebdriver');
 chai.use(JWebDriver.chaiSupportChainPromise);
+const resemble = require('resemblejs-node');
+resemble.outputSettings({
+    errorType: 'flatDifferenceIntensity'
+});
 
-var rootPath = getRootPath();
-var appPath = '/Users/lucy/Desktop/zhulux_signed_aligned.apk';
-var platformName = 'Android';
+const rootPath = getRootPath();
+const appPath = '/Users/caribou.apk';
+const platformName = 'Android';
 
 module.exports = function(){
 
@@ -20,24 +24,24 @@ module.exports = function(){
         testVars = self.testVars;
     });
 
+    it('drag: 743, 1075, 0, 1081, 0.74', async function(){
+        await driver.sendActions('drag', {fromX: 743, fromY:1075, toX:0, toY:1081, duration: 0.74});
+    });
+
+    it('drag: 1019, 952, 0, 964, 0.57', async function(){
+        await driver.sendActions('drag', {fromX: 1019, fromY:952, toX:0, toY:964, duration: 0.57});
+    });
+
+    it('tap: 立即体验 ( //*[@text="立即体验"] )', async function(){
+        await driver.wait('//*[@text="立即体验"]', 30000).sendElementActions('tap');
+    });
+
     it('tap: 请输入手机号 ( //*[@text="请输入手机号"] )', async function(){
         await driver.wait('//*[@text="请输入手机号"]', 30000).sendElementActions('tap');
     });
 
-    it('sendKeys: 15101058801{ESCAPE}', async function(){
-        await driver.sendKeys(_(`15101058801{ESCAPE}`));
-    });
-
-    it('tap: 下一步 ( //*[@text="下一步"] )', async function(){
-        await driver.wait('//*[@text="下一步"]', 30000).sendElementActions('tap');
-    });
-
-    it('tap: 请输入6位验证码 ( //*[@text="请输入6位验证码"] )', async function(){
-        await driver.wait('//*[@text="请输入6位验证码"]', 30000).sendElementActions('tap');
-    });
-
-    it('sendKeys: 123456{ESCAPE}', async function(){
-        await driver.sendKeys(_(`123456{ESCAPE}`));
+    it('sendKeys: 13123456789{ESCAPE}', async function(){
+        await driver.sendKeys(_(`13123456789{ESCAPE}`));
     });
 
     it('tap: 下一步 ( //*[@text="下一步"] )', async function(){
@@ -82,40 +86,31 @@ if(module.parent && /mocha\.js/.test(module.parent.id)){
 
 function runThisSpec(){
     // read config
-    var config = require(rootPath + '/config.json');
-    var webdriverConfig = Object.assign({},config.webdriver);
-    var host = webdriverConfig.host;
-    var port = webdriverConfig.port || 4444;
-    var testVars = config.vars;
+    let config = require(rootPath + '/config.json');
+    let webdriverConfig = Object.assign({},config.webdriver);
+    let host = webdriverConfig.host;
+    let port = webdriverConfig.port || 4444;
+    let testVars = config.vars;
 
-    var screenshotPath = rootPath + '/screenshots';
-    var doScreenshot = fs.existsSync(screenshotPath);
+    let specName = path.relative(rootPath, __filename).replace(/\\/g,'/').replace(/\.js$/,'');
 
-    var specName = path.relative(rootPath, __filename).replace(/\\/g,'/').replace(/\.js$/,'');
-
-    var arrDeviceList = getEnvList() || getDeviceList(platformName);
+    let arrDeviceList = getEnvList() || getDeviceList(platformName);
     if(arrDeviceList.length ===0 ){
         console.log('Search mobile device failed!');
         process.exit(1);
     }
 
     arrDeviceList.forEach(function(device){
-        var caseName = specName + ' : ' + (device.name?device.name+' ['+device.udid+']':device.udid);
-
-        if(doScreenshot){
-            mkdirs(path.dirname(screenshotPath + '/' + caseName));
-        }
+        let caseName = specName + ' : ' + (device.name?device.name+' ['+device.udid+']':device.udid);
 
         describe(caseName, function(){
-
-            var stepId = 1;
 
             this.timeout(600000);
             this.slow(1000);
 
             before(function(){
-                var self = this;
-                var driver = new JWebDriver({
+                let self = this;
+                let driver = new JWebDriver({
                     'host': host,
                     'port': port
                 });
@@ -125,20 +120,30 @@ function runThisSpec(){
                     'app': /^(\/|[a-z]:\\|https?:\/\/)/i.test(appPath) ? appPath : rootPath + '/' + appPath
                 });
                 self.testVars = testVars;
+                let casePath = path.dirname(caseName);
+                self.screenshotPath = rootPath + '/screenshots/' + casePath;
+                self.diffbasePath = rootPath + '/diffbase/' + casePath;
+                self.caseName = caseName.replace(/.*\//g, '').replace(/\s*[:\.\:\-\s]\s*/g, '_');
+                mkdirs(self.screenshotPath);
+                mkdirs(self.diffbasePath);
+                self.stepId = 0;
                 return self.driver;
             });
 
             module.exports();
 
-            afterEach(function(){
-                if(doScreenshot){
-                    var filepath = screenshotPath + '/' + caseName.replace(/[^\/]+$/, function(all){
-                        return all.replace(/\s*[:\.\:\-\s]\s*/g, '_');
-                    }) + '_' + (stepId++);
-                    return this.driver.getScreenshot(filepath + '.png').source().then(function(code){
-                        fs.writeFileSync(filepath + '.json', code);
-                    }).catch(function(){});
-                }
+            beforeEach(function(){
+                let self = this;
+                self.stepId ++;
+            });
+
+            afterEach(async function(){
+                let self = this;
+                let filepath = self.screenshotPath + '/' + self.caseName + '_' + self.stepId;
+                let driver = self.driver;
+                await driver.getScreenshot(filepath + '.png');
+                let json = await driver.source();
+                fs.writeFileSync(filepath + '.json', json);
             });
 
             after(function(){
@@ -150,7 +155,7 @@ function runThisSpec(){
 }
 
 function getRootPath(){
-    var rootPath = path.resolve(__dirname);
+    let rootPath = path.resolve(__dirname);
     while(rootPath){
         if(fs.existsSync(rootPath + '/config.json')){
             break;
@@ -182,7 +187,7 @@ function callSpec(name){
 }
 
 function getEnvList(){
-    var strEnvList = process.env.devices;
+    let strEnvList = process.env.devices;
     if(strEnvList){
         return strEnvList.split(/\s*,\s*/).map(function(udid){
             return {udid: udid};
@@ -191,8 +196,8 @@ function getEnvList(){
 }
 
 function getDeviceList(platformName){
-    var arrDeviceList = [];
-    var strText, match;
+    let arrDeviceList = [];
+    let strText, match;
     if(platformName === 'Android')
     {
         // for android
@@ -207,7 +212,7 @@ function getDeviceList(platformName){
         // ios real device
         strText = cp.execSync('idevice_id -l').toString();
         strText.replace(/(.+)\r?\n/g, function(all, udid){
-            var deviceName = cp.execSync('idevice_id -d '+udid).toString();
+            let deviceName = cp.execSync('idevice_id -d '+udid).toString();
             deviceName = deviceName.replace(/\r?\n/g, '');
             arrDeviceList.push({
                 name: deviceName,
@@ -225,4 +230,3 @@ function getDeviceList(platformName){
     }
     return arrDeviceList;
 }
-
