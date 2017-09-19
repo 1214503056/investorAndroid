@@ -2,55 +2,26 @@
    / / / /  _/  / __ \___  _________  _________/ /__  _____
   / / / // /   / /_/ / _ \/ ___/ __ \/ ___/ __  / _ \/ ___/
  / /_/ // /   / _, _/  __/ /__/ /_/ / /  / /_/ /  __/ /    
- \____/___/  /_/ |_|\___/\___/\____/_/   \__,_/\___/_/    v2.5.12
+ \____/___/  /_/ |_|\___/\___/\____/_/   \__,_/\___/_/    v2.5.27
 
 Official Site: http://uirecorder.com
 ------------------------------------------------------------------
 
-? 测试脚本文件名: (sample/test.spec.js) ? 测试脚本文件名: (sample/test.spec.js) 4? 测试脚本文件名: (sample/test.spec.js) 4.? 测试脚本文件名: (sample/test.spec.js) 4.2? 测试脚本文件名: (sample/test.spec.js) 4.2.? 测试脚本文件名: (sample/test.spec.js) 4.2.0? 测试脚本文件名: (sample/test.spec.js) 4.2.0/? 测试脚本文件名: (sample/test.spec.js) 4.2.0/c? 测试脚本文件名: (sample/test.spec.js) 4.2.0/ch? 测试脚本文件名: (sample/test.spec.js) 4.2.0/cha? 测试脚本文件名: (sample/test.spec.js) 4.2.0/chat? 测试脚本文件名: (sample/test.spec.js) 4.2.0/chat.? 测试脚本文件名: (sample/test.spec.js) 4.2.0/chat.s? 测试脚本文件名: (sample/test.spec.js) 4.2.0/chat.sp? 测试脚本文件名: (sample/test.spec.js) 4.2.0/chat.spe? 测试脚本文件名: (sample/test.spec.js) 4.2.0/chat.spec? 测试脚本文件名: (sample/test.spec.js) 4.2.0/chat.spec.? 测试脚本文件名: (sample/test.spec.js) 4.2.0/chat.spec.j? 测试脚本文件名: (sample/test.spec.js) 4.2.0/chat.spec.js? 测试脚本文件名: 4.2.0/chat.spec.js
-? App路径 (扩展名: apk, app, zip): () ? App路径 (扩展名: apk, app, zip): () /? App路径 (扩展名: apk, app, zip): () /U? App路径 (扩展名: apk, app, zip): () /Us? App路径 (扩展名: apk, app, zip): () /Use? App路径 (扩展名: apk, app, zip): () /User? App路径 (扩展名: apk, app, zip): () /Users? App路径 (扩展名: apk, app, zip): () /Users/? App路径 (扩展名: apk, app, zip): () /Users/l? App路径 (扩展名: apk, app, zip): () /Users/lu? App路径 (扩展名: apk, app, zip): () /Users/luc? App路径 (扩展名: apk, app, zip): () /Users/lucy? App路径 (扩展名: apk, app, zip): () /Users/lucy/? App路径 (扩展名: apk, app, zip): () /Users/lucy/D? App路径 (扩展名: apk, app, zip): () /Users/lucy/De? App路径 (扩展名: apk, app, zip): () /Users/lucy/Des? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desk? App路径 (扩展名: apk, app, zip): () /Users/lucy/Deskt? App路径 (扩展名: apk, app, zip): () /Users/lucy/Deskto? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/c? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/ca? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/car? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/cari? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/carib? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribo? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_2? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_20? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_201? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_2017? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_20170? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_201708? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_2017081? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_20170810? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_20170810.? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_20170810.a? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_20170810.ap? App路径 (扩展名: apk, app, zip): () /Users/lucy/Desktop/caribou_v4.2.0_20170810.apk
-[1A? App路径 (扩展名: apk, app, zip): /Users/lucy/Desktop/caribou_v4.2.0_20170810.apk
+? 测试脚本文件名: (sample/test.spec.js) ? 测试脚本文件名: sample/test.spec.js
+? 文件已存在，加载并继续录制吗？ (y/N) ? 文件已存在，加载并继续录制吗？ No
+? App路径 (扩展名: apk, app, zip): () ? App路径 (扩展名: apk, app, zip): () /? App路径 (扩展名: apk, app, zip): () /U? App路径 (扩展名: apk, app, zip): () /Us? App路径 (扩展名: apk, app, zip): () /Use? App路径 (扩展名: apk, app, zip): () /User? App路径 (扩展名: apk, app, zip): () /Users? App路径 (扩展名: apk, app, zip): () /Users/? App路径 (扩展名: apk, app, zip): () /Users/c? App路径 (扩展名: apk, app, zip): () /Users/ca? App路径 (扩展名: apk, app, zip): () /Users/car? App路径 (扩展名: apk, app, zip): () /Users/cari? App路径 (扩展名: apk, app, zip): () /Users/carib? App路径 (扩展名: apk, app, zip): () /Users/caribo? App路径 (扩展名: apk, app, zip): () /Users/caribou? App路径 (扩展名: apk, app, zip): () /Users/caribou.? App路径 (扩展名: apk, app, zip): () /Users/caribou.a? App路径 (扩展名: apk, app, zip): () /Users/caribou.ap? App路径 (扩展名: apk, app, zip): () /Users/caribou.apk? App路径 (扩展名: apk, app, zip): /Users/caribou.apk
 
 录制服务器监听在端口: 9765
 录制浏览器已开启
-  tap: 请输入手机号 ( //*[@text="请输入手机号"] )
-   ✓ 执行成功
-  sendKeys: 13123456789{ESCAPE}
-   ✓ 执行成功
-  tap: 下一步 ( //*[@text="下一步"] )
-   ✓ 执行成功
-  tap: 请输入6位验证码 ( //*[@text="请输入6位验证码"] )
-   ✓ 执行成功
-  sendKeys: 123456{ESCAPE}
-   ✓ 执行成功
-  tap: 登录 ( //*[@text="登录"] )
-   ✓ 执行成功
-  expect: text, //*[@text="小助手"], equal, 小助手
-   ✓ 执行成功
-  tap: 小助手 ( //*[@text="小助手"] )
-   ✓ 执行成功
-  expect: text, //*[@text="逐鹿小助手"], equal, 逐鹿小助手
-   ✓ 执行成功
-  expect: text, //*[@text="发送"], equal, 发送
-   ✓ 执行成功
-  tap: 向逐鹿小助手直接咨询... ( //*[@text="向逐鹿小助手直接咨询项目情况"] )
-   ✓ 执行成功
-  sendKeys: 测试一下，吼吼{ESCAPE}
-   ✓ 执行成功
-  tap: 私信 ( //*[@text="私信"] )
-   ✓ 执行成功
-  tap: 593, 460
-   ✓ 执行成功
-  tap: 人人office ( //*[@text="人人office"] )
-   ✓ 执行成功
-  tap: 向逐鹿小助手直接咨询... ( //*[@text="向逐鹿小助手直接咨询项目情况"] )
-   ✓ 执行成功
-  sendKeys: 发送地方{ESCAPE}
-   ✓ 执行成功
 
 ------------------------------------------------------------------
 
-  发现新版本: 2.5.12 → 2.5.27
+录制服务器已关闭
+录制浏览器已关闭
+
+------------------------------------------------------------------
+
+  发现新版本: 2.5.27 → 2.5.32
   执行命令升级：npm i uirecorder -g
 
 ------------------------------------------------------------------

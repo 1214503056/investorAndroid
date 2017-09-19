@@ -1,1 +1,305 @@
-var fs = require('fs');var path = require('path');var cp = require('child_process');var chai = require("chai");var should = chai.should();var JWebDriver = require('jwebdriver');chai.use(JWebDriver.chaiSupportChainPromise);var rootPath = getRootPath();var appPath = '/Users/caribou_v4.2.0_20170810.apk';var platformName = 'Android';module.exports = function(){    var driver, testVars;    before(function(){        var self = this;        driver = self.driver;        testVars = self.testVars;    });    it('tap: 请输入手机号 ( //*[@text="请输入手机号"] )', async function(){        await driver.wait('//*[@text="请输入手机号"]', 30000).sendElementActions('tap');    });    it('sendKeys: 13123456789{ESCAPE}', async function(){        await driver.sendKeys(_(`13123456789{ESCAPE}`));    });    it('tap: 下一步 ( //*[@text="下一步"] )', async function(){        await driver.wait('//*[@text="下一步"]', 30000).sendElementActions('tap');    });    it('tap: 请输入6位验证码 ( //*[@text="请输入6位验证码"] )', async function(){        await driver.wait('//*[@text="请输入6位验证码"]', 30000).sendElementActions('tap');    });    it('sendKeys: 123456{ESCAPE}', async function(){        await driver.sendKeys(_(`123456{ESCAPE}`));    });    it('tap: 登录 ( //*[@text="登录"] )', async function(){        await driver.wait('//*[@text="登录"]', 30000).sendElementActions('tap');    });    it('expect: text, //*[@text="我的"], equal, 我的', async function(){        await driver.sleep(300).wait('//*[@text="我的"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`我的`));    });    it('tap: 我的 ( //*[@text="我的"] )', async function(){        await driver.wait('//*[@text="我的"]', 30000).sendElementActions('tap');    });    it('expect: text, //*[@text="关注的项目"], equal, 关注的项目', async function(){        await driver.sleep(300).wait('//*[@text="关注的项目"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`关注的项目`));    });    it('tap: 关注的项目 ( //*[@text="关注的项目"] )', async function(){        await driver.wait('//*[@text="关注的项目"]', 30000).sendElementActions('tap');    });    it('expect: text, //*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView, equal, 关注的项目', async function(){        await driver.sleep(300).wait('//*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`关注的项目`));    });    it('expect: text, //*[@text="初心客厅"], equal, 初心客厅', async function(){        await driver.sleep(300).wait('//*[@text="初心客厅"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`初心客厅`));    });    it('tap: 初心客厅 ( //*[@text="初心客厅"] )', async function(){        await driver.wait('//*[@text="初心客厅"]', 30000).sendElementActions('tap');    });    it('expect: text, //*[@text="项目详情"], equal, 项目详情', async function(){        await driver.sleep(300).wait('//*[@text="项目详情"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`项目详情`));    });    it('expect: text, //*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView, equal, 初心客厅', async function(){        await driver.sleep(300).wait('//*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`初心客厅`));    });    it('expect: text, //*[@text="FA"], equal, FA', async function(){        await driver.sleep(300).wait('//*[@text="FA"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`FA`));    });    it('expect: text, //*[@text="项目信息"], equal, 项目信息', async function(){        await driver.sleep(300).wait('//*[@text="项目信息"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`项目信息`));    });    it('expect: text, //*[@text="BP"], equal, BP', async function(){        await driver.sleep(300).wait('//*[@text="BP"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`BP`));    });    it('expect: text, //*[@text="致电"], equal, 致电', async function(){        await driver.sleep(300).wait('//*[@text="致电"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`致电`));    });    it('expect: text, //*[@text="私信"], equal, 私信', async function(){        await driver.sleep(300).wait('//*[@text="私信"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`私信`));    });    it('expect: text, //*[@text="已关注"], equal, 已关注', async function(){        await driver.sleep(300).wait('//*[@text="已关注"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`已关注`));    });    it('expect: text, //*[@text="安排会议"], equal, 安排会议', async function(){        await driver.sleep(300).wait('//*[@text="安排会议"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`安排会议`));    });    it('tap: //*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.ImageView', async function(){        await driver.wait('//*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.ImageView', 30000).sendElementActions('tap');    });    it('tap: //*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.widget.ImageView', async function(){        await driver.wait('//*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.widget.ImageView', 30000).sendElementActions('tap');    });    it('back: ', async function(){        await driver.back();    });    it('back: ', async function(){        await driver.back();    });    it('back: ', async function(){        await driver.back();    });    it('tap: 致电 ( //*[@text="致电"] )', async function(){        await driver.wait('//*[@text="致电"]', 30000).sendElementActions('tap');    });    it('back: ', async function(){        await driver.back();    });    it('back: ', async function(){        await driver.back();    });    it('back: ', async function(){        await driver.back();    });    it('tap: 已关注 ( //*[@text="已关注"] )', async function(){        await driver.wait('//*[@text="已关注"]', 30000).sendElementActions('tap');    });    it('expect: text, //*[@text="关注"], equal, 关注', async function(){        await driver.sleep(300).wait('//*[@text="关注"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`关注`));    });    it('tap: 关注 ( //*[@text="关注"] )', async function(){        await driver.wait('//*[@text="关注"]', 30000).sendElementActions('tap');    });    it('expect: text, //*[@text="已关注"], equal, 已关注', async function(){        await driver.sleep(300).wait('//*[@text="已关注"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`已关注`));    });    it('tap: 安排会议 ( //*[@text="安排会议"] )', async function(){        await driver.wait('//*[@text="安排会议"]', 30000).sendElementActions('tap');    });    it('expect: text, //*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView, equal, 安排会议', async function(){        await driver.sleep(300).wait('//*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`安排会议`));    });    it('expect: text, //*[@text="面谈"], equal, 面谈', async function(){        await driver.sleep(300).wait('//*[@text="面谈"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`面谈`));    });    it('expect: text, //*[@text="联系逐鹿小助手排会"], equal, 联系逐鹿小助手排会', async function(){        await driver.sleep(300).wait('//*[@text="联系逐鹿小助手排会"]', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`联系逐鹿小助手排会`));    });    it('back: ', async function(){        await driver.back();    });    it('tap: 536, 1247', async function(){        await driver.sendActions('tap', {x: 536, y: 1247});    });    it('drag: 536, 1247, 1078, 719, 0.58', async function(){        await driver.sendActions('drag', {fromX: 536, fromY:1247, toX:1078, toY:719, duration: 0.58});    });    it('drag: 517, 1259, 527, 802, 1.20', async function(){        await driver.sendActions('drag', {fromX: 517, fromY:1259, toX:527, toY:802, duration: 1.20});    });    it('drag: 568, 1136, 579, 651, 0.69', async function(){        await driver.sendActions('drag', {fromX: 568, fromY:1136, toX:579, toY:651, duration: 0.69});    });    it('drag: 538, 1148, 584, 867, 0.51', async function(){        await driver.sendActions('drag', {fromX: 538, fromY:1148, toX:584, toY:867, duration: 0.51});    });    it('back: ', async function(){        await driver.back();    });    it('expect: text, //*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView, equal, 关注的项目', async function(){        await driver.sleep(300).wait('//*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView', 30000)               .text()               .should.not.be.a('error')               .should.equal(_(`关注的项目`));    });    function _(str){        if(typeof str === 'string'){            return str.replace(/\{\{(.+?)\}\}/g, function(all, key){                return testVars[key] || '';            });        }        else{            return str;        }    }};if(module.parent && /mocha\.js/.test(module.parent.id)){    runThisSpec();}function runThisSpec(){    // read config    var config = require(rootPath + '/config.json');    var webdriverConfig = Object.assign({},config.webdriver);    var host = webdriverConfig.host;    var port = webdriverConfig.port || 4444;    var testVars = config.vars;    var screenshotPath = rootPath + '/screenshots';    var doScreenshot = fs.existsSync(screenshotPath);    var specName = path.relative(rootPath, __filename).replace(/\\/g,'/').replace(/\.js$/,'');    var arrDeviceList = getEnvList() || getDeviceList(platformName);    if(arrDeviceList.length ===0 ){        console.log('Search mobile device failed!');        process.exit(1);    }    arrDeviceList.forEach(function(device){        var caseName = specName + ' : ' + (device.name?device.name+' ['+device.udid+']':device.udid);        if(doScreenshot){            mkdirs(path.dirname(screenshotPath + '/' + caseName));        }        describe(caseName, function(){            var stepId = 1;            this.timeout(600000);            this.slow(1000);            before(function(){                var self = this;                var driver = new JWebDriver({                    'host': host,                    'port': port                });                self.driver = driver.session({                    'platformName': platformName,                    'udid': device.udid,                    'app': /^(\/|[a-z]:\\|https?:\/\/)/i.test(appPath) ? appPath : rootPath + '/' + appPath                });                self.testVars = testVars;                return self.driver;            });            module.exports();            afterEach(function(){                if(doScreenshot){                    var filepath = screenshotPath + '/' + caseName.replace(/[^\/]+$/, function(all){                        return all.replace(/\s*[:\.\:\-\s]\s*/g, '_');                    }) + '_' + (stepId++);                    return this.driver.getScreenshot(filepath + '.png').source().then(function(code){                        fs.writeFileSync(filepath + '.json', code);                    }).catch(function(){});                }            });            after(function(){                return this.driver.close();            });        });    });}function getRootPath(){    var rootPath = path.resolve(__dirname);    while(rootPath){        if(fs.existsSync(rootPath + '/config.json')){            break;        }        rootPath = rootPath.substring(0, rootPath.lastIndexOf(path.sep));    }    return rootPath;}function mkdirs(dirname){    if(fs.existsSync(dirname)){        return true;    }else{        if(mkdirs(path.dirname(dirname))){            fs.mkdirSync(dirname);            return true;        }    }}function callSpec(name){    try{        require(rootPath + '/' + name)();    }    catch(e){        console.log(e)        process.exit(1);    }}function getEnvList(){    var strEnvList = process.env.devices;    if(strEnvList){        return strEnvList.split(/\s*,\s*/).map(function(udid){            return {udid: udid};        });    }}function getDeviceList(platformName){    var arrDeviceList = [];    var strText, match;    if(platformName === 'Android')    {        // for android        strText = cp.execSync('adb devices').toString();        strText.replace(/(.+?)\s+device\r?\n/g, function(all, deviceName){            arrDeviceList.push({                udid: deviceName            });        });    }    else{        // ios real device        strText = cp.execSync('idevice_id -l').toString();        strText.replace(/(.+)\r?\n/g, function(all, udid){            var deviceName = cp.execSync('idevice_id -d '+udid).toString();            deviceName = deviceName.replace(/\r?\n/g, '');            arrDeviceList.push({                name: deviceName,                udid: udid            });        });        // ios simulator        strText = cp.execSync('xcrun simctl list devices').toString();        strText.replace(/\r?\n\s*(.+?)\s+\((.+?)\) \(Booted\)/g, function(all, deviceName, udid){            arrDeviceList.push({                name: deviceName,                udid: udid            });        });    }    return arrDeviceList;}
+const fs = require('fs');
+const path = require('path');
+const cp = require('child_process');
+const chai = require("chai");
+const should = chai.should();
+const JWebDriver = require('jwebdriver');
+chai.use(JWebDriver.chaiSupportChainPromise);
+const resemble = require('resemblejs-node');
+resemble.outputSettings({
+    errorType: 'flatDifferenceIntensity'
+});
+
+const rootPath = getRootPath();
+const appPath = '/Users/caribou.apk';
+const platformName = 'Android';
+
+module.exports = function(){
+
+    var driver, testVars;
+
+    before(function(){
+        var self = this;
+        driver = self.driver;
+        testVars = self.testVars;
+    });
+
+    callSpec('commons/login.mod.js');
+
+    it('tap: 我的 ( //*[@text="我的"] )', async function(){
+        await driver.wait('//*[@text="我的"]', 30000).sendElementActions('tap');
+    });
+
+    it('tap: 关注的项目 ( //*[@text="关注的项目"] )', async function(){
+        await driver.wait('//*[@text="关注的项目"]', 30000).sendElementActions('tap');
+    });
+
+    it('expect: text, //*[@text="初心客厅"], equal, 初心客厅', async function(){
+        await driver.sleep(300).wait('//*[@text="初心客厅"]', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`初心客厅`));
+    });
+
+    it('tap: 初心客厅 ( //*[@text="初心客厅"] )', async function(){
+        await driver.wait('//*[@text="初心客厅"]', 30000).sendElementActions('tap');
+    });
+
+    it('expect: text, //*[@text="项目详情"], equal, 项目详情', async function(){
+        await driver.sleep(300).wait('//*[@text="项目详情"]', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`项目详情`));
+    });
+
+    it('expect: text, //*[@text="项目FA"], equal, 项目FA', async function(){
+        await driver.sleep(300).wait('//*[@text="项目FA"]', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`项目FA`));
+    });
+
+    it('expect: text, //*[@text="项目信息"], equal, 项目信息', async function(){
+        await driver.sleep(300).wait('//*[@text="项目信息"]', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`项目信息`));
+    });
+
+    it('expect: text, //*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView, equal, 医疗健康', async function(){
+        await driver.sleep(300).wait('//*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`医疗健康`));
+    });
+
+    it('expect: text, //*[@text="BP"], equal, BP', async function(){
+        await driver.sleep(300).wait('//*[@text="BP"]', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`BP`));
+    });
+
+    it('expect: text, //*[@text="已关注"], equal, 已关注', async function(){
+        await driver.sleep(300).wait('//*[@text="已关注"]', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`已关注`));
+    });
+
+    it('expect: text, //*[@text="对接项目方"], equal, 对接项目方', async function(){
+        await driver.sleep(300).wait('//*[@text="对接项目方"]', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`对接项目方`));
+    });
+
+    it('drag: 649, 1267, 622, 339, 0.64', async function(){
+        await driver.sendActions('drag', {fromX: 649, fromY:1267, toX:622, toY:339, duration: 0.64});
+    });
+
+    it('drag: 484, 1499, 779, 288, 0.75', async function(){
+        await driver.sendActions('drag', {fromX: 484, fromY:1499, toX:779, toY:288, duration: 0.75});
+    });
+
+    it('drag: 505, 1571, 712, 640, 0.83', async function(){
+        await driver.sendActions('drag', {fromX: 505, fromY:1571, toX:712, toY:640, duration: 0.83});
+    });
+
+    it('drag: 538, 1379, 607, 168, 0.56', async function(){
+        await driver.sendActions('drag', {fromX: 538, fromY:1379, toX:607, toY:168, duration: 0.56});
+    });
+
+    it('drag: 628, 1349, 622, 540, 0.68', async function(){
+        await driver.sendActions('drag', {fromX: 628, fromY:1349, toX:622, toY:540, duration: 0.68});
+    });
+
+    it('drag: 532, 1201, 722, 342, 0.50', async function(){
+        await driver.sendActions('drag', {fromX: 532, fromY:1201, toX:722, toY:342, duration: 0.50});
+    });
+
+    it('drag: 433, 1174, 415, 630, 0.66', async function(){
+        await driver.sendActions('drag', {fromX: 433, fromY:1174, toX:415, toY:630, duration: 0.66});
+    });
+
+    it('back: ', async function(){
+        await driver.back();
+    });
+
+    it('expect: text, //*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView, equal, 关注的项目', async function(){
+        await driver.sleep(300).wait('//*[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`关注的项目`));
+    });
+
+    it('expect: text, //*[@text="初心客厅"], equal, 初心客厅', async function(){
+        await driver.sleep(300).wait('//*[@text="初心客厅"]', 30000)
+               .text()
+               .should.not.be.a('error')
+               .should.equal(_(`初心客厅`));
+    });
+
+    function _(str){
+        if(typeof str === 'string'){
+            return str.replace(/\{\{(.+?)\}\}/g, function(all, key){
+                return testVars[key] || '';
+            });
+        }
+        else{
+            return str;
+        }
+    }
+
+};
+
+if(module.parent && /mocha\.js/.test(module.parent.id)){
+    runThisSpec();
+}
+
+function runThisSpec(){
+    // read config
+    let config = require(rootPath + '/config.json');
+    let webdriverConfig = Object.assign({},config.webdriver);
+    let host = webdriverConfig.host;
+    let port = webdriverConfig.port || 4444;
+    let testVars = config.vars;
+
+    let specName = path.relative(rootPath, __filename).replace(/\\/g,'/').replace(/\.js$/,'');
+
+    let arrDeviceList = getEnvList() || getDeviceList(platformName);
+    if(arrDeviceList.length ===0 ){
+        console.log('Search mobile device failed!');
+        process.exit(1);
+    }
+
+    arrDeviceList.forEach(function(device){
+        let caseName = specName + ' : ' + (device.name?device.name+' ['+device.udid+']':device.udid);
+
+        describe(caseName, function(){
+
+            this.timeout(600000);
+            this.slow(1000);
+
+            before(function(){
+                let self = this;
+                let driver = new JWebDriver({
+                    'host': host,
+                    'port': port
+                });
+                self.driver = driver.session({
+                    'platformName': platformName,
+                    'udid': device.udid,
+                    'app': /^(\/|[a-z]:\\|https?:\/\/)/i.test(appPath) ? appPath : rootPath + '/' + appPath
+                });
+                self.testVars = testVars;
+                let casePath = path.dirname(caseName);
+                self.screenshotPath = rootPath + '/screenshots/' + casePath;
+                self.diffbasePath = rootPath + '/diffbase/' + casePath;
+                self.caseName = caseName.replace(/.*\//g, '').replace(/\s*[:\.\:\-\s]\s*/g, '_');
+                mkdirs(self.screenshotPath);
+                mkdirs(self.diffbasePath);
+                self.stepId = 0;
+                return self.driver;
+            });
+
+            module.exports();
+
+            beforeEach(function(){
+                let self = this;
+                self.stepId ++;
+            });
+
+            afterEach(async function(){
+                let self = this;
+                let filepath = self.screenshotPath + '/' + self.caseName + '_' + self.stepId;
+                let driver = self.driver;
+                await driver.getScreenshot(filepath + '.png');
+                let json = await driver.source();
+                fs.writeFileSync(filepath + '.json', json);
+            });
+
+            after(function(){
+                return this.driver.close();
+            });
+
+        });
+    });
+}
+
+function getRootPath(){
+    let rootPath = path.resolve(__dirname);
+    while(rootPath){
+        if(fs.existsSync(rootPath + '/config.json')){
+            break;
+        }
+        rootPath = rootPath.substring(0, rootPath.lastIndexOf(path.sep));
+    }
+    return rootPath;
+}
+
+function mkdirs(dirname){
+    if(fs.existsSync(dirname)){
+        return true;
+    }else{
+        if(mkdirs(path.dirname(dirname))){
+            fs.mkdirSync(dirname);
+            return true;
+        }
+    }
+}
+
+function callSpec(name){
+    try{
+        require(rootPath + '/' + name)();
+    }
+    catch(e){
+        console.log(e)
+        process.exit(1);
+    }
+}
+
+function getEnvList(){
+    let strEnvList = process.env.devices;
+    if(strEnvList){
+        return strEnvList.split(/\s*,\s*/).map(function(udid){
+            return {udid: udid};
+        });
+    }
+}
+
+function getDeviceList(platformName){
+    let arrDeviceList = [];
+    let strText, match;
+    if(platformName === 'Android')
+    {
+        // for android
+        strText = cp.execSync('adb devices').toString();
+        strText.replace(/(.+?)\s+device\r?\n/g, function(all, deviceName){
+            arrDeviceList.push({
+                udid: deviceName
+            });
+        });
+    }
+    else{
+        // ios real device
+        strText = cp.execSync('idevice_id -l').toString();
+        strText.replace(/(.+)\r?\n/g, function(all, udid){
+            let deviceName = cp.execSync('idevice_id -d '+udid).toString();
+            deviceName = deviceName.replace(/\r?\n/g, '');
+            arrDeviceList.push({
+                name: deviceName,
+                udid: udid
+            });
+        });
+        // ios simulator
+        strText = cp.execSync('xcrun simctl list devices').toString();
+        strText.replace(/\r?\n\s*(.+?)\s+\((.+?)\) \(Booted\)/g, function(all, deviceName, udid){
+            arrDeviceList.push({
+                name: deviceName,
+                udid: udid
+            });
+        });
+    }
+    return arrDeviceList;
+}
