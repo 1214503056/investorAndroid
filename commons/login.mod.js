@@ -24,18 +24,6 @@ module.exports = function(){
         testVars = self.testVars;
     });
 
-    it('drag: 743, 1075, 0, 1081, 0.74', async function(){
-        await driver.sendActions('drag', {fromX: 743, fromY:1075, toX:0, toY:1081, duration: 0.74});
-    });
-
-    it('drag: 1019, 952, 0, 964, 0.57', async function(){
-        await driver.sendActions('drag', {fromX: 1019, fromY:952, toX:0, toY:964, duration: 0.57});
-    });
-
-    it('tap: 立即体验 ( //*[@text="立即体验"] )', async function(){
-        await driver.wait('//*[@text="立即体验"]', 30000).sendElementActions('tap');
-    });
-
     it('tap: 请输入手机号 ( //*[@text="请输入手机号"] )', async function(){
         await driver.wait('//*[@text="请输入手机号"]', 30000).sendElementActions('tap');
     });
